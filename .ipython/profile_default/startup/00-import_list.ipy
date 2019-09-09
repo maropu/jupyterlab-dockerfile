@@ -1,0 +1,22 @@
+import numpy as np
+import pandas as pd
+import pydotplus
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+import lightgbm as lgb
+import xgboost as xgb
+from databricks import koalas as ks
+from dtreeviz.trees import dtreeviz
+from pyspark.sql import SparkSession
+
+from IPython.display import HTML, Image, SVG, display
+from IPython.core.interactiveshell import InteractiveShell
+InteractiveShell.ast_node_interactivity = "all"
+
+spark = SparkSession.builder \
+    .appName('JupyterLab') \
+    .master('local[*]') \
+    .config('spark.jars', '') \
+    .getOrCreate()
+
