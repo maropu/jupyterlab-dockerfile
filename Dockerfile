@@ -27,12 +27,14 @@ RUN pip install --upgrade pip && \
       pyspark==2.4.4 \
       koalas==0.17.0 \
       mlflow==1.2.0 \
+      pandas==0.24.0 \
       pandas-profiling==2.3.0 \
       altair==3.2.0 \
       pydotplus==2.0.2 \
       graphviz==0.13 \
       selenium==3.141.0 \
       yellowbrick==1.0.post1 \
+      snorkel==0.9.1 \
       xgboost==0.82 \
       lightgbm==2.2.3 \
       featuretools==0.10.1 \
@@ -42,7 +44,7 @@ RUN pip install --upgrade pip && \
       bokeh==1.3.4
 
 # Install tensorflow packages
-# RUN pip install --no-cache-dir --ignore-installed PyYAML \
-#       tensorflow==1.14.0 \
+RUN pip install --no-cache-dir --ignore-installed PyYAML \
+      tensorflow==1.14.0
 #       tensorflow-data-validation==0.14.1
 
