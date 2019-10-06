@@ -40,6 +40,7 @@ RUN pip install --upgrade pip && \
       lightgbm==2.2.3 \
       featuretools==0.10.1 \
       category-encoders==2.0.0 \
+      m2cgen==0.4.0 \
       Boruta==0.3 \
       dtreeviz==0.6 \
       bokeh==1.3.4
