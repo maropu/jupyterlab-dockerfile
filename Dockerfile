@@ -25,7 +25,7 @@ RUN pip install --upgrade pip && \
   pip install --upgrade setuptools && \
   pip install --no-cache-dir \
     pyspark==2.4.4 \
-    pyarrow==0.10.0 \
+    # pyarrow==0.10.0 \
     koalas==0.17.0 \
     mlflow==1.2.0 \
     pandas==0.24.0 \
