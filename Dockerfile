@@ -25,6 +25,7 @@ RUN pip install --upgrade pip && \
   pip install --upgrade setuptools && \
   pip install --no-cache-dir \
     pyspark==2.4.4 \
+    pyarrow==0.10.0 \
     koalas==0.17.0 \
     mlflow==1.2.0 \
     pandas==0.24.0 \
@@ -56,9 +57,9 @@ RUN echo '{ "enabled": true }' > \
   /home/jovyan/.jupyter/lab/user-settings/@jupyterlab/extensionmanager-extension/plugin.jupyterlab-settings
 
 # Enable the vim keymap
-RUN mkdir -p /home/jovyan/.jupyter/lab/user-settings/@jupyterlab/codemirror-extension
-RUN echo '{ "keyMap": "vim" }' > \
-  /home/jovyan/.jupyter/lab/user-settings/@jupyterlab/codemirror-extension/commands.jupyterlab-settings
+# RUN mkdir -p /home/jovyan/.jupyter/lab/user-settings/@jupyterlab/codemirror-extension
+# RUN echo '{ "keyMap": "vim" }' > \
+#   /home/jovyan/.jupyter/lab/user-settings/@jupyterlab/codemirror-extension/commands.jupyterlab-settings
 
 # Add line numbers
 RUN mkdir -p /home/jovyan/.jupyter/lab/user-settings/@jupyterlab/notebook-extension
@@ -67,7 +68,7 @@ RUN echo '{ "codeCellConfig": { "lineNumbers": true } }' \
 
 # Install JupyterLab extensions
 RUN jupyter labextension install @lckr/jupyterlab_variableinspector
-RUN jupyter labextension install jupyterlab_vim
+# RUN jupyter labextension install jupyterlab_vim
 
 RUN jupyter labextension install @jupyterlab/git
 RUN pip install jupyterlab-git
