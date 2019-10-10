@@ -17,4 +17,5 @@ mlruns
 package-lock.json
 node_modules
 Untitled*.ipynb
+.node-gyp
 
