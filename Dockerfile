@@ -44,7 +44,8 @@ RUN pip install --upgrade pip && \
     m2cgen==0.4.0 \
     Boruta==0.3 \
     dtreeviz==0.6 \
-    bokeh==1.3.4
+    bokeh==1.3.4 \
+    ipython-sql==0.3.9
 
 # Install tensorflow packages
 # RUN pip install --no-cache-dir --ignore-installed PyYAML \
