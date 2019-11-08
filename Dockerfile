@@ -37,6 +37,7 @@ RUN pip install --upgrade pip && \
     yellowbrick==1.0.post1 \
     snorkel==0.9.1 \
     hyperopt==0.2.2 \
+    papermill==1.2.1 \
     textblob==0.15.3 \
     xgboost==0.82 \
     lightgbm==2.2.3 \
@@ -69,6 +70,7 @@ RUN echo '{ "codeCellConfig": { "lineNumbers": true } }' \
   /home/jovyan/.jupyter/lab/user-settings/@jupyterlab/notebook-extension/tracker.jupyterlab-settings
 
 # Install JupyterLab extensions
+RUN jupyter labextension install @jupyterlab/celltags
 RUN jupyter labextension install @lckr/jupyterlab_variableinspector
 # RUN jupyter labextension install jupyterlab_vim
 
