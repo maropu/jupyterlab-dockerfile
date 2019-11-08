@@ -38,6 +38,7 @@ RUN pip install --upgrade pip && \
     snorkel==0.9.1 \
     hyperopt==0.2.2 \
     papermill==1.2.1 \
+    shap==0.32.0 \
     textblob==0.15.3 \
     xgboost==0.82 \
     lightgbm==2.2.3 \
