@@ -36,6 +36,7 @@ RUN pip install --upgrade pip && \
     selenium==3.141.0 \
     yellowbrick==1.0.post1 \
     snorkel==0.9.1 \
+    hyperopt==0.2.2 \
     textblob==0.15.3 \
     xgboost==0.82 \
     lightgbm==2.2.3 \
