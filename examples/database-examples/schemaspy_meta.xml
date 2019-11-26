@@ -1,0 +1,21 @@
+<schemaMeta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schemaspy.org/xsd/6/schemameta.xsd" >
+    <comments>DATABASE COMMENT</comments>
+    <tables>
+        <table name="item" comments="TABLE COMMENT">
+            <column name="item_name" type="TEXT" comments="AUTO-GENERATED-IC(NOT NULL)" />
+        </table>
+
+        <table name="acc_data">
+            <column name="item_code" type="INT" comments="AUTO-GENERATED-FK(item.item_code)">
+                <foreignKey table="item" column="item_code" />
+            </column>
+        </table>
+        
+        <table name="store" remoteCatalog="remote_catalog" remoteSchema="remote_schema">
+            <column name="store_id" autoUpdated="true" primaryKey="true" type="INT">
+                <foreignKey table="item" column="store_id"/>
+            </column>
+            <column name="store_name" type="TEXT" />
+        </table>
+    </tables>
+</schemaMeta>
