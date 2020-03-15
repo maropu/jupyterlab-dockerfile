@@ -25,6 +25,7 @@ RUN pip install --upgrade pip && \
   pip install --upgrade setuptools && \
   pip install --no-cache-dir \
     pyspark==2.4.4 \
+    # joblibspark=0.1.0 \
     # pyarrow==0.10.0 \
     koalas==0.17.0 \
     mlflow==1.2.0 \
@@ -71,7 +72,7 @@ RUN echo '{ "codeCellConfig": { "lineNumbers": true } }' \
   /home/jovyan/.jupyter/lab/user-settings/@jupyterlab/notebook-extension/tracker.jupyterlab-settings
 
 # Install JupyterLab extensions
-RUN jupyter labextension install @jupyterlab/celltags
+# RUN jupyter labextension install @jupyterlab/celltags
 RUN jupyter labextension install @lckr/jupyterlab_variableinspector
 # RUN jupyter labextension install jupyterlab_vim
 RUN jupyter labextension install nbdime-jupyterlab
