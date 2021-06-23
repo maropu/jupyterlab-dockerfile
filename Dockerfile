@@ -73,11 +73,11 @@ RUN echo '{ "codeCellConfig": { "lineNumbers": true } }' \
 
 # Install JupyterLab extensions
 # RUN jupyter labextension install @jupyterlab/celltags
-RUN jupyter labextension install @lckr/jupyterlab_variableinspector
+# RUN jupyter labextension install @lckr/jupyterlab_variableinspector
 # RUN jupyter labextension install jupyterlab_vim
 RUN jupyter labextension install nbdime-jupyterlab
 
-RUN jupyter labextension install @jupyterlab/git
-RUN pip install jupyterlab-git
-RUN jupyter serverextension enable --py jupyterlab_git
+# RUN jupyter labextension install @jupyterlab/git
+# RUN pip install jupyterlab-git
+# RUN jupyter serverextension enable --py jupyterlab_git
 
